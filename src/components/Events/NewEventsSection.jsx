@@ -9,6 +9,8 @@ export default function NewEventsSection() {
     //useQuery() returns {loading , error ,data} properties that we can use to render our UI
     queryKey: ["events"],
     queryFn: fetchEvents, //this function should be a function which will return a promise
+    staleTime: 5000,
+    gcTime: 30000,
   });
 
   let content;
