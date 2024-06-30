@@ -1,20 +1,18 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
-import Modal from '../UI/Modal.jsx';
-import EventForm from './EventForm.jsx';
+import Modal from "../UI/Modal.jsx";
+import EventForm from "./EventForm.jsx";
 
 export default function EditEvent() {
   const navigate = useNavigate();
 
-  function handleSubmit(formData) {}
-
   function handleClose() {
-    navigate('../');
+    navigate("../");
   }
 
   return (
     <Modal onClose={handleClose}>
-      <EventForm inputData={null} onSubmit={handleSubmit}>
+      <EventForm inputData={null}>
         <Link to="../" className="button-text">
           Cancel
         </Link>
