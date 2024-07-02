@@ -1,7 +1,7 @@
 export async function fetchEvents(searchTerm) {
   let url = "http://localhost:3000/events";
 
-  if (searchTerm) {
+  if (searchTerm) {   
     url += "?search=" + searchTerm;
   }
 
